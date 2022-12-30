@@ -1,43 +1,54 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			apiUrl: 'https://swapi.dev/api',
+			characters: {},
+			planets: {},
+			starships: {},
+			
+			favorites: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+			loadDataFromCharacters: () => {
+				const { apiUrl } = getStore()
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+				fetch(`${apiUrl}/people`)
+					.then((response) => response.json())
+					.then((data) => {
+						console.log("DATA CHARACTERS", data)
+						setStore({
+							characters: data
+						})
+					})
+					.catch(error => console.log("error", error));
+			},
+			loadDataFromPlanets: () => {
+				const { apiUrl } = getStore()
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
+				fetch(`${apiUrl}/planets`)
+					.then((response) => response.json())
+					.then((data) => {
+						// console.log("DATA PLANETS", data)
+						setStore({
+							planets: data
+						})
+					})
+					.catch(error => console.log("error", error));
+			},
+			loadDataFromStarships: () => {
+				const { apiUrl } = getStore()
+
+				fetch(`${apiUrl}/starships`)
+					.then((response) => response.json())
+					.then((data) => {
+						// console.log("DATA STARSHIPS", data)
+						setStore({
+							starships: data
+						})
+					})
+					.catch(error => console.log("error", error));
+			},
+			
 		}
 	};
 };

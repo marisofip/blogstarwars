@@ -40,8 +40,8 @@ const Carousel = () => {
         <div className="carousel-item active">
             <img src={Starwars1} className="mx-auto d-block w-50 rounded-3" alt="..." />
             <div className="carousel-caption d-none d-md-block text-light">
-              <h5 className="text-warning">Planets</h5>
-              <p className="text-warning">Here will found the planets from starwars</p>
+              <h5 className="text-warning shadow-lg"><strong>Planets</strong></h5>
+              <p className="text-warning shadow-lg"> <strong> Disfrutarás de los encantos, peligros y misterios <br/> que encierran todos esos ecosistemas que han sido escenario de STAR WARS</strong></p>
               <Link to="planets" className="btn btn-secondary">
                 Learn More
               </Link>
@@ -50,8 +50,8 @@ const Carousel = () => {
           <div className="carousel-item ">
             <img src={Starwars} className="mx-auto d-block w-50 rounded-3" alt="..." />
             <div className="carousel-caption d-none d-md-block text-light">
-              <h5 className="text-warning">Starchips</h5>
-              <p className="text-warning">Here will found the starchips from starwars</p>
+              <h5 className="text-dark"><strong>Starchips</strong></h5>
+              <p className="text-dark "><strong>Por esta sección desfilan las naves más famosas de toda la galaxia y<br/>  los vehículos aéreos, acuáticos, espaciales y terrestres que han aparecido durante la saga.</strong></p>
               <Link to="Starchips" className="btn btn-secondary">
                 Learn More
               </Link>
@@ -60,8 +60,8 @@ const Carousel = () => {
           <div className="carousel-item">
             <img src={Starwars2} className="mx-auto d-block w-50 rounded-3" alt="..." />
             <div className="carousel-caption d-none d-md-block text-light">
-              <h5 className="text-warning">Characters</h5>
-              <p className="text-warning">Here will found the characters from starwars</p>
+              <h5 className="text-warning shadow-lg"><strong>Characters</strong></h5>
+              <p className="text-warning shadow-lg"><strong>Héroes valerosos y villanos abyectos no serían nada si <br/> no hubiera a su lado pilotos, jedis, estafadores, ingenieros o cazarrecompensas. </strong></p>
               <Link to="/" className="btn btn-secondary">
                 Learn More
               </Link>

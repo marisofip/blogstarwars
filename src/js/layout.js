@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { HomeCharacters } from "./views/home";
+import { Planets } from "./views/planets";
+//import { Starchips } from "./views/starchips";
+import { DetailsCharacters } from "./views/detailscharacters";
+import { DetailsPlanets } from "./views/detailsplanets";
+//import { DetailsStarchips } from "./views/detailsstarchips";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -22,11 +24,15 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+					<Route path="/" element={< HomeCharacters/>}/>
+					<Route path="/planets" element={< Planets/>}/>
+					<Route path="/detailscharacters/:id" element={< DetailsCharacters/>}/>
+					<Route path="/detailsplanets/:id" element={< DetailsPlanets/>}/>
+							
+
+
 					</Routes>
+							
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
