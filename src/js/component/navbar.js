@@ -35,17 +35,15 @@ export const Navbar = () => {
 			  </li>
 			</ul>
 			<div className="d-flex ms-auto">
-			  <div className="dropdown">
+			 
 			  <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-secondary "
                
-                id="dropdownMenuButton1"
-                
               >
 				 <Favorites />
 			
 				 </button>
-			  </div>
+		
 			</div>
 		  </div>
 		</div>

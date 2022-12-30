@@ -10,22 +10,24 @@ const Favorites = () => {
 	return (
 	
 		<div className="favorites">
-			<span className="btn btn-secondary" id="dropdownMenuButton1"  type="button" onClick={() => actions.setMostrarFavoritos()}>
+			<button className="btn btn-secondary dropdown-toggle "   onClick={() => actions.setMostrarFavoritos()}>
 				Favorites {store.favorites.length}
-			</span>
+			</button>
 		
 			<ul className={store.mostrarFavoritos ? "visible" : "oculto"}>
 				{store.favorites.map((el, index) => {
 					console.log(index)
 					return (
+						<div className="listado">
 						<li key={index}>
-							{el}
-							<i onClick={() => actions.eliminarFavoritos(index)} className="far fa-trash-alt" />
-						</li>
+							{el} {" "}
+							<li onClick={() => actions.eliminarFavoritos(index)} className="far fa-trash-alt" />
+						</li> </div>
 					);
 				})}
 			</ul>
-		</div>
+			</div>
+		
 
 	)
 };

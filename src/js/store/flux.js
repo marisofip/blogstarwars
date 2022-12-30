@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: {},
 			starships: {},
 			favorites: [],
-			mostrarFavoritos: true
+			mostrarFavoritos: false
 		},
 		actions: {
 			loadDataFromCharacters: () => {
