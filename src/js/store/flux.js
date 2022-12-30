@@ -15,7 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`${apiUrl}/people`)
 					.then((response) => response.json())
 					.then((data) => {
-						console.log("DATA CHARACTERS", data)
+						//console.log("DATA CHARACTERS", data)
 						setStore({
 							characters: data
 						})

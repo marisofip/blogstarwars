@@ -14,19 +14,18 @@ const CardPlanets = () => {
           store.planets.results !== undefined ?
             (store.planets.results.map((result, index) => {
               return (
-                <div className="card w-25 m-auto bg-secondary" key={index}>
-                  <img src={planetas} className="card-img-top w-50" alt="..." />
+                <div className="card w-auto m-auto bg-secondary" key={index}>
+                  <img src={planetas} className="card-img-top w-auto" alt="..." />
                   <div className="card-body">
                     <h5 className="card-title">{result.name}</h5>
                     <p className="card-title"><strong>Terrain:</strong> {result.terrain}</p>
-                    <p className="card-title"><strong>Population:</strong> {result.population}</p>
                     <p className="card-title"><strong>Climate:</strong> {result.climate}</p>
-                    <Link to={`/detailsplanets/${result.name}`} className="btn btn-warning" onClick={() => actions.loadDataFromCharacters(result.url)} >
+                    <div className="d-grid gap-2 d-flex ">
+                    <Link to={`/detailsplanets/${result.name}`} className="btn btn-dark text-warning" onClick={() => actions.loadDataFromPlanets(result.url)} >
                       Read More
                     </Link>
-                    <div className="d-grid gap-2 d-flex justify-content-md-end">
                       <button
-                        className="btn btn-outline-warning me-md-2"
+                        className="btn btn-warning me-md-2 justify-content-end"
                         type=""
                       ><AiFillHeart onClick={() => { actions.addFavorite(result.name) }} /></button>
                     </div>

@@ -23,19 +23,19 @@ export const Navbar = () => {
 		  <div className="collapse navbar-collapse" id="navbarNav">
 			<ul className="navbar-nav">
 			  <li className="nav-item">
-				<Link to="/" className="nav-link">Characters</Link>
+				<Link to="/" className="nav-link text-warning">Characters</Link>
 			  </li>
 			  <li className="nav-item">
-				<Link to="/planets" className="nav-link">Planets</Link>
+				<Link to="/planets" className="nav-link text-warning">Planets</Link>
 			  </li>
 			  <li className="nav-item">
-				<Link to="/starchips" className="nav-link">Starships</Link>
+				<Link to="/starchips" className="nav-link text-warning">Starships</Link>
 			  </li>
 			</ul>
 			<div className="d-flex ms-auto">
 			  <div className="dropdown">
 				<button
-				  className="btn btn-secondary dropdown-toggle"
+				  className="btn btn-secondary dropdown-toggle text-warning"
 				  type="button"
 				  id="dropdownMenuButton1"
 				  data-bs-toggle="dropdown"

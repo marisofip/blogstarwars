@@ -3,3 +3,16 @@ body
     background-color: black;
    
 }
+
+#dropdownMenuButton1:hover
+{font-weight: 600;
+color: #ffe484;
+border-color: #ffe484;
+background-color: #ffe484;;
+}
+#personaje {
+   
+    max-width: 100%;
+    height: auto;
+    display:block
+}

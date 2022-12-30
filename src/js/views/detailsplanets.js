@@ -16,9 +16,7 @@ export const DetailsPlanets = props => {
 						<div className="container border-0" key={index}>
 							<div className="card mb-3 border-0">
 								<div className="row g-0">
-									{/*<div className="col-md-4">
-										<img src={starwars} className="img-fluid" alt="..." />
-                    </div>*/}
+									
 									<div className="col-md-8">
 										<div className="card-body">
 											<h5 className="card-title">{result.name}</h5>
@@ -41,7 +39,7 @@ export const DetailsPlanets = props => {
 				})
 			}
 			<Link to="/">
-				<button className="btn btn-primary d-grid gap-2 col-1 mx-auto">
+				<button className="btn btn-dark text-warning d-grid gap-2 col-1 mx-auto">
 					Back to Home
 				</button>
 			</Link>

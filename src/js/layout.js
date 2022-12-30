@@ -1,16 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-import { HomeCharacters } from "./views/home";
-import { Planets } from "./views/planets";
-//import { Starchips } from "./views/starchips";
-import { DetailsCharacters } from "./views/detailscharacters";
-import { DetailsPlanets } from "./views/detailsplanets";
-//import { DetailsStarchips } from "./views/detailsstarchips";
+import {HomeCharacters}  from "./views/home";
+import {Planets}  from "./views/planets";
+import {Starchips} from "./views/starchips";
+import {DetailsCharacters} from "./views/detailscharacters";
+import {DetailsPlanets} from "./views/detailsplanets";
+import {DetailsStarchips} from "./views/detailsstarchips";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+
 
 //create your first component
 const Layout = () => {
@@ -23,14 +24,14 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
+					
 					<Routes>
 					<Route path="/" element={< HomeCharacters/>}/>
 					<Route path="/planets" element={< Planets/>}/>
+					<Route path="/starchips" element={< Starchips/>}/>
 					<Route path="/detailscharacters/:id" element={< DetailsCharacters/>}/>
 					<Route path="/detailsplanets/:id" element={< DetailsPlanets/>}/>
-							
-
-
+					<Route path="/detailsstarchips/:id" element={< DetailsStarchips/>}/>	
 					</Routes>
 							
 					<Footer />
