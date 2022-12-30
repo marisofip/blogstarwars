@@ -43,7 +43,7 @@ const CardCharacters = () => {
                    <button
                       className="btn btn-warning me-md-2 "
                       type=""
-                    ><AiFillHeart onClick={() => { actions.agregarFavoritos(result.name) }}/></button>
+                    ><i className="far fa-heart"  onClick={() => { actions.agregarFavoritos(result.name) }}/></button>
                   </div>
                 </div>
               </div>

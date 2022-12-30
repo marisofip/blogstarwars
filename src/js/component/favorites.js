@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
-import { FaTrashAlt } from 'react-icons/fa';
+//import { FaTrashAlt } from 'react-icons/fa';
 
 const Favorites = () => { 
 	const { store, actions } = useContext(Context);
@@ -16,10 +16,11 @@ const Favorites = () => {
 		
 			<ul className={store.mostrarFavoritos ? "visible" : "oculto"}>
 				{store.favorites.map((el, index) => {
+					console.log(index)
 					return (
 						<li key={index}>
-							{el.name}
-							<i onClick={() => actions.eliminarFavoritos(index)} className={FaTrashAlt}/>
+							{el}
+							<i onClick={() => actions.eliminarFavoritos(index)} className="far fa-trash-alt" />
 						</li>
 					);
 				})}

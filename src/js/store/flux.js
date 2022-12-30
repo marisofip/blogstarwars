@@ -5,9 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters: {},
 			planets: {},
 			starships: {},
-			
 			favorites: [],
-			mostrarFavoritos: false
+			mostrarFavoritos: true
 		},
 		actions: {
 			loadDataFromCharacters: () => {
@@ -52,8 +51,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 			agregarFavoritos: id => {
 				const store = getStore();
-				setStore({ favorites: [...store.favorites, store.characters[id - 1]] });
-			},
+				//setStore({ favorites: [...store.favorites, store.characters[id - 1]] });
+				setStore(store.favorites.push(id))},
 			eliminarFavoritos: index => {
 				const store = getStore();
 

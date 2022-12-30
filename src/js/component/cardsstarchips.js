@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AiFillHeart } from 'react-icons/ai';
+//import { AiFillHeart } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import nave from "../../img/nave.jpg"
@@ -27,7 +27,7 @@ const CardStarchips = () => {
                     <button
                       className="btn btn-warning me-md-2 justify-content-end"
                       type=""
-                    ><AiFillHeart onClick={() => { actions.agregarFavoritos(result.name) }}/></button>
+                    >< i className="far fa-heart"  onClick={() => { actions.agregarFavoritos(result.name) }}/></button>
                   </div>
                 </div>
               </div>
