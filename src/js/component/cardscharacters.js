@@ -36,14 +36,14 @@ const CardCharacters = () => {
                   <h5 className="card-title text-dark">{result.name}</h5>
                   <p className="card-title text-dark"><strong>Height:</strong> {result.height}</p>
                   <p className="card-title text-dark"><strong>Gender:</strong> {result.gender}</p>
-                  <div className="d-grid gap-2 d-flex ">
+                  <div className="d-grid gap-2 d-flex" id="botones">
                   <Link to={`/detailscharacters/${result.name}`} className="btn btn-dark text-warning" onClick={() => actions.loadDataFromCharacters(result.url)}>
                     Read More
                   </Link>
                    <button
-                      className="btn btn-warning me-md-2 justify-content-end"
+                      className="btn btn-warning me-md-2 "
                       type=""
-                    ><AiFillHeart onClick={() => { actions.addFavorite(result.name) }}/></button>
+                    ><AiFillHeart onClick={() => { actions.agregarFavoritos(result.name) }}/></button>
                   </div>
                 </div>
               </div>

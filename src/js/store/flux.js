@@ -6,7 +6,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planets: {},
 			starships: {},
 			
-			favorites: []
+			favorites: [],
+			mostrarFavoritos: false
 		},
 		actions: {
 			loadDataFromCharacters: () => {
@@ -49,8 +50,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error", error));
 			},
 			
+			agregarFavoritos: id => {
+				const store = getStore();
+				setStore({ favorites: [...store.favorites, store.characters[id - 1]] });
+			},
+			eliminarFavoritos: index => {
+				const store = getStore();
+
+				const eliminar = store.favorites.filter((el, i) => {
+					return index !== i;
+				});
+				console.log(eliminar);
+				setStore({ favorites: eliminar });
+				console.log(store.favorites);
+			},
+			setMostrarFavoritos: e => {
+				const store = getStore();
+				setStore({ mostrarFavoritos: !store.mostrarFavoritos });
+			}
+			
 		}
 	};
-};
+}
 
 export default getState;

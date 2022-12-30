@@ -13,11 +13,11 @@ export const DetailsCharacters = props => {
 				store.characters.results.map((result, index) => {
 					return (
 						<div className="container border-0 " key={index}>
-							<div className="card mb-3 border-0">
+							<div className="card mb-3 border-0 bg-transparent">
 								<div className="row g-0">
 									
-									<div className="col-md-8">
-										<div className="card-body">
+									<div className="col-md-12">
+										<div className="card-body text-warning">
 											<h5 className="card-title">{result.name}</h5>
 											<ul>
 												<li className="card-text col-md-8">Height: {result.height}</li>

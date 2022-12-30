@@ -1,8 +1,14 @@
 body 
 {
     background-color: black;
+    background-image: url("https://3.bp.blogspot.com/-I0XXGAlCi_k/V62_0qL7ojI/AAAAAAAF77g/_JG5fsv3VLMBI4fOPiRpPaVUusPg6BtngCLcB/s1600/EFECTOS%2B%2528533%2529.gif"); 
+                background-position: center 25%; 
+                background-size: cover;
+                background-repeat: repeat-y;
    
+ 
 }
+
 
 #dropdownMenuButton1:hover
 {font-weight: 600;
@@ -15,4 +21,8 @@ background-color: #ffe484;;
     max-width: 100%;
     height: auto;
     display:block
+}
+#botones {
+    justify-content: space-between; 
+    
 }

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext }  from "react";
 import { Link } from "react-router-dom";
+import Favorites from "./favorites";
+
 
 export const Navbar = () => {
 	return (
@@ -34,16 +36,15 @@ export const Navbar = () => {
 			</ul>
 			<div className="d-flex ms-auto">
 			  <div className="dropdown">
-				<button
-				  className="btn btn-secondary dropdown-toggle text-warning"
-				  type="button"
-				  id="dropdownMenuButton1"
-				  data-bs-toggle="dropdown"
-				  aria-expanded="false"
-				>
-				  Favorites
-				</button>
-				
+			  <button
+                className="btn btn-secondary dropdown-toggle"
+               
+                id="dropdownMenuButton1"
+                
+              >
+				 <Favorites />
+			
+				 </button>
 			  </div>
 			</div>
 		  </div>

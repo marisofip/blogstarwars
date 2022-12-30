@@ -51,7 +51,7 @@ const Carousel = () => {
             <img src={Starwars} className="mx-auto d-block w-50 rounded-3" alt="..." />
             <div className="carousel-caption d-none d-md-block text-light">
               <h5 className="text-dark"><strong>Starchips</strong></h5>
-              <p className="text-dark "><strong>Por esta sección desfilan las naves más famosas de toda la galaxia y los vehículos aéreos,  acuáticos, espaciales y terrestres que han aparecido durante la saga.</strong></p>
+              <p className="text-dark "><strong>Por esta sección desfilan las naves más famosas de toda la galaxia y los vehículos<br/> aéreos,  acuáticos, espaciales y terrestres que han aparecido durante la saga.</strong></p>
               <Link to="/starchips" className="btn btn-secondary">
                 Learn More
               </Link>
